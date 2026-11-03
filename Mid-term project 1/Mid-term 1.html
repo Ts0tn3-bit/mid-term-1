@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პირველი შუალედური პროქტი - Saul Goodman & Associates-იურიდიული მომსახურება</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--რათა არ მომიწიოს ახალი css ფაილების შექმნა-->
+</head>
+
+<body class="bg-amber-50 text-gray-900 font-bold">
+    <!--ფონი არის ყვითელი-ნარინჯისფერი და ტექსტი გამუქებულია-->
+
+    <header class="bg-yellow-400 shadow-md sticky top-0 z-50">
+        <!--ჰედერი არის ყვითელი, აქვს მცირე ჩრდილი და 
+        ვებსაიტის დათვალიერებისას ეკრანზე ადგილს არ იცვლის. 
+        z-50 ბრძანება იმისთვისაა, რომ ჰედერი ვებსაიტის სხვა ელემენტებზე წინ იყოს-->
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!--მაქსიმალური სიგანე შეზღუდულია 24 პიქსელამდე და 
+            პედინგი არის გაკეთებული როგორც ჰორიზონტალურად, 
+            ისე ვერტიკალურად. flex justify-between item-center გამოიყენება 
+            რათა ელემენტები ვერტიკალურად განაწილდეს-->
+            <a href="#" class="inline-flex items-center hover:opacity-80 transition">
+                <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/Better_Call_Saul_logo.svg/1280px-Better_Call_Saul_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+                    alt="Better Call Saul Logo" class="h-10 w-auto">
+            </a>
+            <!--როდესაც ლოგოსთან მივიტან კურსორს ცოტათი გამჭვირვალე ხდება.
+            სურათის სიმაღლე მითითებულია, მაგრამ სიგანე ავტომატურად განისაზღვრება-->
+
+            <nav class="hidden md:flex space-x-6">
+                <a href="#hero" class="text-gray-900 hover:text-red-600 font-bold transition">მთავარი</a>
+                <a href="#about" class="text-gray-900 hover:text-red-600 font-bold transition">სოლ გუდმანი</a>
+                <a href="#features" class="text-gray-900 hover:text-red-600 font-bold transition">სერვისები</a>
+                <a href="#footer" class="text-gray-900 hover:text-red-600 font-bold transition">კონტაქტი</a>
+            </nav>
+            <!--ნავიგაციის მენიუ მობილურ ეკრანებზე დამალულია,
+            თუმცა დიდ ეკრანებზე ირთვება როგორც flex მწკრივი, 
+            ანუ ჰორიზონტალურად. href=# გამოვიყენე,
+            რომ საიტის შესაბამის ნაწილზე გადავიყვანო მომხმარებელი,
+            როდესაც ამ სიტყვებს დააწკაპუნებს.
+            space-x-6 ქმნის ბმულებს შორის დაშორებას-->
+
+            <div class="hidden md:block">
+                <a href="#footer"
+                    class="bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 transition shadow-md">
+                    დარეკეთ ახლავე
+                </a>
+            </div>
+            <!--hidden md:block გამოვიყენე რათა მობილურზე დამალული
+            ყოფილიყო ჰედერის მარჯვენა ღილაკი,
+            ხოლო კომპიუტერზე გამოჩენილიყო-->
+        </div>
+    </header>
+
+    <!--ახლა იწყება hero სექცია-->
+    <section id="hero" class="bg-amber-500 text-white py-20 px-4 shadow-lg">
+        <!--ფერი არის ფონის უფრო მუქი ვერსია. დავამატე პედინგი და ჩრდილი-->
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <!--კონტეინერის სიგანე შევამცირე და ტექსტი ცენტრში მოვათავსე.
+            ამასთანავე, ელემენტებს შორის ინტერვალი გავაკეთე. -->
+            <h1 class="text-4xl md:text-6xl font-extrabold">
+                პრობლემები გაქვთ კანონთან? BETTER CALL SAUL!
+            </h1>
+            <!--შრიფტის ზომა ეკრანის ზომასთან ერთად იცვლება.-->
+            <p class="text-lg md:text-xl text-yellow-100 max-w-2xl mx-auto font-medium">
+                ალბუკერკეს ყველაზე ცნობილი და შედეგზე ორიენტირებული ადვოკატი. თქვენი უფლებების დაცვა შესაძლებელია
+                ნებისმიერ სიტუაციაში.
+            </p>
+            <!--ტექსტის ზომა არის large(text-lg) მობილურზე,
+            თუმცა უფრო დიდ ეკრანებზე არის extra large(text-xl).
+            აბზაცის სიგანე შემცირებულია და ცენტრში ავტომატურად სწორდება.-->
+            <div class="pt-4 justify-center">
+                <a href="#features"
+                    class="bg-yellow-400 text-red-700 px-6 py-3 rounded-xl font-bold text-bg hover:bg-yellow-300">
+                    სერვისები
+                </a>
+                <a href="#footer"
+                    class="border-4 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white hover:text-red-600 ">
+                    უფასო კონსულტაცია
+                </a>
+            </div>
+            <!--ღილაკები რომ ზედა ტექსტს არ მიკარებოდა დავამატე პედინგი ზემოთ
+            justify-center ღილაკებს ზუსტად ცენტრში ალაგებს.
+            ღილაკებს შორის დაშორება როგორ გავაკეთო?-->
+        </div>
+    </section>
+    <!--features სექცია-->
+    <section id="features" class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-red-600 mb-3">რატომ უნდა აირჩიოთ სოლ გუდმანი?</h2>
+            <p class="text-gray-700 mx-auto font-medium">კანონი იცავს მას, ვისაც ჰყავს საუკეთესო ადვოკატი</p>
+        </div>
+        <!--კონტეინერში არსებული ყველა ელემენტი ცენტრშია მოქცეული.
+        გამოყენებულია margin bottom.-->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!--მობილურზე ელემენტები ლაგდება ერთ სვეტად,
+            ხოლო შედარებით ფართო ეკრანებზე 3 სვეტად.-->
+            <!--პირველი ბარათი-->
+            <div
+                class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition border-2 border-yellow-400 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">სისხლის სამართალი</h3>
+                    <p class="text-gray-600 text-sm font-medium">
+                        დაცვა ნებისმიერი ბრალდების წინააღმდეგ. მომგებიანი სტრატეგია და თქვენი ინტერესების
+                        მაქსიმალური დაცვა.
+                    </p>
+                </div>
+            </div>
+            <!--მეორე ბარათი-->
+            <div
+                class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition border-2 border-yellow-400 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">ბიზნესის კონსულტაცია</h3>
+                    <p class="text-gray-600 text-sm font-medium">
+                        ფინანსური და იურიდიული სქემების ოპტიმიზაცია. კომპანიის არქივების უსაფრთხოება და
+                        კონფიდენციალურობა.
+                    </p>
+                </div>
+            </div>
+            <!--მესამე ბარათი-->
+            <div
+                class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition border-2 border-yellow-400 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">საგზაო შემთხვევები</h3>
+                    <p class="text-gray-600 text-sm font-medium">
+                        ავტოავარიების შემდეგ მიიღეთ კუთვნილი კომპენსაცია სწრაფად და ზედმეტი ბიუროკრატიის
+                        გარეშე.
+                    </p>
+                </div>
+            </div>
+            <!--justify-between გამოიყენება რომ ელემენტებს შორის სივრცე თანაბრად შეივსოს
+            და რადგან მე flex flex-col დავწერე ანუ ვერტიკალურად დავალაგე,
+            ამიტომ ზემოდან ქვემოთ ლაგდება ელემენტებიც-->
+    </section>
+    <!--footer სექცია სოციალური მედიის ბმულებით-->
+    <section id="footer" class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between ">
+            <!--საავტორო უფლებები-->
+            <div class="text2x1 text-center md:text-left">
+                2026წ. სჯობს დაურეკოთ სოლს. ყველა უფლება დაცულია.
+            </div>
+            <!--მობილურზე ტექსტი იქნება ცენტრში, ხოლო ფართო ეკრანებზე მარცხნივ.-->
+
+            <!--სოციალური მედიის ბმულები-->
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition">Facebook</a>
+                <a href="#" class="hover:text-white transition">LinkedIn</a>
+                <a href="#" class="hover:text-white transition">Instagram</a>
+            </div>
+        </div>
+    </section>
